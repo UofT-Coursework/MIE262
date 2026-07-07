@@ -1,0 +1,13 @@
+#calling the tables
+
+table table1 "ODBC" "./DietDB.mdb" "FOOD_TB":
+	F <- [FOOD], c ~ cost, Fmin ~ f_min, Fmax ~ f_max;
+read table table1;
+
+table table2 "ODBC" "./DietDB.mdb" "SQL=SELECT * FROM NUT_TB WHERE REQ=1":
+	N <- [NUT], Nmin ~ n_min, Nmax ~ n_max;
+read table table2;
+	
+table table3 "ODBC" "./DietDB.mdb" "AMT_TB":
+	[FOOD,NUT], a ~ amt;
+read table table3;

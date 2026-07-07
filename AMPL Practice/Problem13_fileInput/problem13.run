@@ -1,0 +1,8 @@
+reset;
+
+model problem13.mod;
+data problem13.dat;
+option solver gurobi;
+solve;
+
+display Cost, x, s_const.slack, d_const.slack;

@@ -1,0 +1,201 @@
+cost = 1165
+
+:        x  x.rc    :=
+i1 j1     0   1
+i1 j2     0   3
+i1 j3    80   0
+i2 j1     0   1
+i2 j2    75   0
+i2 j3     0   2
+i3 j1     0   1
+i3 j2     0   2
+i3 j3    80   0
+i4 j1     0   2
+i4 j2     0   1
+i4 j3   120   0
+i5 j1    60   0
+i5 j2     0   2
+i5 j3     0   1
+;
+
+:  co1.dual co2.dual co1.slack co2.slack    :=
+i1     2         .        0         .
+i2     3         .        0         .
+i3     3         .        0         .
+i4     3         .        0         .
+i5     3         .        0         .
+j1      .       0         .        420
+j2      .       0         .        405
+j3      .       0         .        200
+;
+
+
+
+********** Iteration Number: 1 ************
+cost = 1179
+
+:        x  x.rc    :=
+i1 j1     0   1
+i1 j2     0   3
+i1 j3    81   0
+i2 j1     0   1
+i2 j2    76   0
+i2 j3     0   2
+i3 j1     0   1
+i3 j2     0   2
+i3 j3    81   0
+i4 j1     0   2
+i4 j2     0   1
+i4 j3   121   0
+i5 j1    61   0
+i5 j2     0   2
+i5 j3     0   1
+;
+
+:  co1.dual co2.dual co1.slack co2.slack    :=
+i1     2         .        0         .
+i2     3         .        0         .
+i3     3         .        0         .
+i4     3         .        0         .
+i5     3         .        0         .
+j1      .       0         .        420
+j2      .       0         .        405
+j3      .       0         .        198
+;
+
+
+
+********** Iteration Number: 2 ************
+cost = 1193
+
+:        x  x.rc    :=
+i1 j1     0   1
+i1 j2     0   3
+i1 j3    82   0
+i2 j1     0   1
+i2 j2    77   0
+i2 j3     0   2
+i3 j1     0   1
+i3 j2     0   2
+i3 j3    82   0
+i4 j1     0   2
+i4 j2     0   1
+i4 j3   122   0
+i5 j1    62   0
+i5 j2     0   2
+i5 j3     0   1
+;
+
+:  co1.dual co2.dual co1.slack co2.slack    :=
+i1     2         .        0         .
+i2     3         .        0         .
+i3     3         .        0         .
+i4     3         .        0         .
+i5     3         .        0         .
+j1      .       0         .        420
+j2      .       0         .        405
+j3      .       0         .        196
+;
+
+
+
+********** Iteration Number: 3 ************
+cost = 1207
+
+:        x  x.rc    :=
+i1 j1     0   1
+i1 j2     0   3
+i1 j3    83   0
+i2 j1     0   1
+i2 j2    78   0
+i2 j3     0   2
+i3 j1     0   1
+i3 j2     0   2
+i3 j3    83   0
+i4 j1     0   2
+i4 j2     0   1
+i4 j3   123   0
+i5 j1    63   0
+i5 j2     0   2
+i5 j3     0   1
+;
+
+:  co1.dual co2.dual co1.slack co2.slack    :=
+i1     2         .        0         .
+i2     3         .        0         .
+i3     3         .        0         .
+i4     3         .        0         .
+i5     3         .        0         .
+j1      .       0         .        420
+j2      .       0         .        405
+j3      .       0         .        194
+;
+
+
+
+********** Iteration Number: 4 ************
+cost = 1221
+
+:        x  x.rc    :=
+i1 j1     0   1
+i1 j2     0   3
+i1 j3    84   0
+i2 j1     0   1
+i2 j2    79   0
+i2 j3     0   2
+i3 j1     0   1
+i3 j2     0   2
+i3 j3    84   0
+i4 j1     0   2
+i4 j2     0   1
+i4 j3   124   0
+i5 j1    64   0
+i5 j2     0   2
+i5 j3     0   1
+;
+
+:  co1.dual co2.dual co1.slack co2.slack    :=
+i1     2         .        0         .
+i2     3         .        0         .
+i3     3         .        0         .
+i4     3         .        0         .
+i5     3         .        0         .
+j1      .       0         .        420
+j2      .       0         .        405
+j3      .       0         .        192
+;
+
+
+
+********** Iteration Number: 5 ************
+cost = 1235
+
+:        x  x.rc    :=
+i1 j1     0   1
+i1 j2     0   3
+i1 j3    85   0
+i2 j1     0   1
+i2 j2    80   0
+i2 j3     0   2
+i3 j1     0   1
+i3 j2     0   2
+i3 j3    85   0
+i4 j1     0   2
+i4 j2     0   1
+i4 j3   125   0
+i5 j1    65   0
+i5 j2     0   2
+i5 j3     0   1
+;
+
+:  co1.dual co2.dual co1.slack co2.slack    :=
+i1     2         .        0         .
+i2     3         .        0         .
+i3     3         .        0         .
+i4     3         .        0         .
+i5     3         .        0         .
+j1      .       0         .        420
+j2      .       0         .        405
+j3      .       0         .        190
+;
+

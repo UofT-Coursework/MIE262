@@ -1,0 +1,11 @@
+table supply "ODBC" "problem13.accdb" "Supply_TB": 
+	W <- [WarehouseIdx], S ~ Supply;
+read table supply;
+	
+table demand "ODBC" "problem13.accdb" "Demand_TB": 
+	C <- [CustomerIdx], D ~ Demand;
+read table demand;
+
+table costs "ODBC" "problem13.accdb" "Costs_TB": 
+	[WarehouseIdx,CustomerIdx], M ~ Cost;
+read table costs;

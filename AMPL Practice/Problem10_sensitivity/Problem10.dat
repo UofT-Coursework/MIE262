@@ -1,0 +1,24 @@
+# Sets
+set I := i1 i2 i3 i4 i5;
+set J := j1 j2 j3;
+
+# Parameters
+param a := 480;
+
+param b :=
+	i1 80
+	i2 75
+	i3 80
+	i4 120
+	i5 60;
+	
+param c:
+		j1	j2 	j3 :=
+	i1	3	5	2
+	i2	4	3	5
+	i3	4	5	3
+	i4	5	4	3
+	i5	3	5	4;
+	
+	
+	

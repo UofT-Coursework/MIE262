@@ -1,0 +1,20 @@
+reset;
+
+model Problem13.mod;
+data Problem13.dat;
+
+option solver gurobi;
+
+set Iteration := 1..6;
+
+for {iter in Iteration}{
+	
+	
+	solve;
+	printf "***** Iteration: %d *****", iter > Problem13.out;
+	display Cost, x, x.rc, co1.dual, co1.slack, co2.dual, co2.slack > Problem13.out;
+	
+	for {j in J}{
+		let c['i1',j] := c['i1',j]+1;
+		}
+}

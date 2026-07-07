@@ -1,0 +1,12 @@
+reset;
+
+model Diet.mod;
+data Diet.dat;
+
+option solver gurobi;
+
+solve;
+
+display Cost, x > Diet.out;
+display x.rc > Diet.out;
+close Diet.out; 

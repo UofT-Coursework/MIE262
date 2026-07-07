@@ -1,0 +1,24 @@
+Cost = 118.059
+
+x [*] :=
+BEEF   5.36061
+ CHK   2
+FISH   2
+ HAM  10
+ MCH  10
+ MTL  10
+ SPG   9.30605
+ TUR   2
+;
+
+x.rc [*] :=
+BEEF  -8.88178e-16
+ CHK   0
+FISH   0
+ HAM   0
+ MCH   0
+ MTL   0
+ SPG   0
+ TUR   0
+;
+

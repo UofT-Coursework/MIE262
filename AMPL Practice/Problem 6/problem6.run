@@ -1,0 +1,8 @@
+reset;
+
+model problem6.mod;
+data problem6.dat;
+option solver gurobi;
+solve;
+
+display profit, x, x.rc, maxW.slack, maxV.slack, cargoAmt.slack, ratio12.slack, ratio23.slack, maxW.dual, maxV.dual, cargoAmt.dual, ratio12.dual, ratio23.dual;

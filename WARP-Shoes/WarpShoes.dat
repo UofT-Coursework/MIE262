@@ -1,0 +1,38 @@
+## MIE262 Project
+## WARP Shoes
+##
+## AMPL data file (.dat)
+## December 2, 2025
+
+table Products IN "ODBC" ".\WARP2011W.mdb" "Product_Master": 
+    SHOE <- [Product_Num], sale_price ~ Sales_Price; 
+read table Products;
+
+table Demand IN "ODBC" ".\WARP2011W.mdb" "SQL=SELECT Product_Num, 20*(AVG(Demand)) \
+    AS [Projected_Feb_Demand] \
+    FROM Product_Demand \
+    WHERE Month=2 \
+    GROUP BY Product_Num \
+    ORDER BY Product_Num":
+    [Product_Num], shoe_demand ~ Projected_Feb_Demand;
+read table Demand;
+
+table RawMaterials IN "ODBC" ".\WARP2011W.mdb" "RM_Master": 
+    MATERIAL <- [RM_Num], material_cost ~ Cost, material_stock ~ S_Quantity; 
+read table RawMaterials; 
+
+table BOM IN "ODBC" ".\WARP2011W.mdb" "BOM":
+    [Product_Num, RM_Num], material_quantity ~ Quantity; 
+read table BOM;
+
+table Machines IN "ODBC" ".\WARP2011W.mdb" "Machine_Master": 
+    MACHINE <- [Machine_Num], machine_cost ~ OpCost_per_min; 
+read table Machines;
+
+table MachineAssign IN "ODBC" ".\WARP2011W.mdb" "Machine_Assign": 
+    [Product_Num, Machine_Num], operation_time ~ Avg_Duration; 
+read table MachineAssign;
+
+table Warehouses IN "ODBC" ".\WARP2011W.mdb" "Warehouse_Master": 
+    WAREHOUSE <- [Warehouse_Num], warehouse_capacity ~ Capacity, warehouse_cost ~ Op_Cost; 
+read table Warehouses;

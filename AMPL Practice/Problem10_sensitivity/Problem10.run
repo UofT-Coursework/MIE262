@@ -1,0 +1,27 @@
+reset;
+
+model Problem10.mod;
+data Problem10.dat;
+option solver gurobi;
+solve;
+
+display cost, x, x.rc, co1.dual, co2.dual, co1.slack, co2.slack > Problem10.out;
+
+set Iterations := 1..5;
+
+for {itr in Iterations} {
+	# Increase the right-hand-sides
+	let a := a+1 ;
+	
+	for {i in I} {
+		let b[i] := b[i]+1;
+	}
+
+	solve;
+	printf "\n\n********* Iteration Number: %d ***********\n", itr > Problem10.out;
+	display cost, x, x.rc, co1.dual, co2.dual, co1.slack, co2.slack > Problem10.out;
+}
+
+	
+	
+	

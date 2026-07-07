@@ -1,0 +1,30 @@
+## MIE262 Project
+## WARP Shoes
+##
+## AMPL run file (.run)
+## December 2, 2025
+
+reset;                                      # Reset environment
+
+model WarpShoes.mod;                        # Load model
+data WarpShoes.dat;                         # Load data
+option solver gurobi;                       # Set solver to Gurobi
+
+solve;                                      # Solve model
+
+# Round solutions (add-in)
+for {i in SHOE} {
+    let shoes_produced[i] := round(shoes_produced[i]);
+}
+
+# Display profit value and vars solution to "WarpShoes.out"
+display Profit, shoes_produced, warehouse_used > WarpShoes.out;
+
+# Display slack (add-in)
+display MaterialBudget.slack > WarpShoes.out;
+display MaterialAvailability.slack > WarpShoes.out;
+display MachineOperationTimeLimit.slack > WarpShoes.out;
+display WarehouseCapacity.slack > WarpShoes.out;
+
+
+close WarpShoes.out;                        # Close WarpShoes.out
